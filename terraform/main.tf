@@ -15,7 +15,7 @@ terraform {
    }
 }
 resource "aws_s3_bucket" "s3Bucket" {
-     bucket = "[BUCKET_NAME_HERE]"
+     bucket = "[kurts-s3-terraform-01]"
      acl       = "public-read"
 
      policy  = <<EOF
@@ -28,7 +28,7 @@ resource "aws_s3_bucket" "s3Bucket" {
              "s3:GetObject"
           ],
          "effect" : "Allow",
-         "resource" : "arn:aws:s3:::[BUCKET_NAME_HERE]/*",
+         "resource" : "arn:aws:s3:::[kurts-s3-terraform-01]/*",
          "principal" : "*"
       }
     ]
